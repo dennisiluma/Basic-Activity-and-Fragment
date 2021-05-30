@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible"
+    android:padding="10dp">
+
+
+    <!--//btn to control fragment navigation-->
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="392dp"
+        android:layout_height="70dp"
+        android:text="Welcome to my Home Activity PAge"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment 1"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnFragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment 2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnFragment1"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="374dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnFragment1"
+        app:layout_constraintTop_toBottomOf="@+id/btnFragment2" />
+
+    <EditText
+        android:id="@+id/etUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Enter your name here"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowToast"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <Button
+        android:id="@+id/sendMessageToNextActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:text="Send Input To Next Activity"
+        app:layout_constraintTop_toBottomOf="@+id/etUserMessage"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btnShowToast"
+        android:layout_width="170dp"
+        android:layout_height="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:text="Show Toast"
+        app:layout_constraintEnd_toEndOf="@+id/fragment"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="@+id/fragment"
+        app:layout_constraintTop_toBottomOf="@+id/fragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
